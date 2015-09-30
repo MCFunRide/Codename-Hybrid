@@ -1,4 +1,4 @@
--- Codename Hybrid
+-- Codename Power
 -- Innovation starts here.
 -- All code in one file
 -- Hybrid OS
@@ -56,6 +56,12 @@ a = [[
 99999
 ddddd
 ]]
+ver = "1.0"
+if not fs.exists("/.version") then
+  f = fs.open("/.version","w")
+  f.writeLine(ver)
+  f.close()
+end
 f = fs.open("/.img","w")
 f.writeLine(a)
 f.close()
